@@ -123,7 +123,11 @@ public class Game {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(year, game.year) && Objects.equals(genre, game.genre) && Objects.equals(platforms, game.platforms) && Objects.equals(score, game.score) && Objects.equals(imgUrl, game.imgUrl) && Objects.equals(shortDescription, game.shortDescription) && Objects.equals(longDescription, game.longDescription);
+        return Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(year, game.year)
+                && Objects.equals(genre, game.genre) && Objects.equals(platforms, game.platforms)
+                && Objects.equals(score, game.score) && Objects.equals(imgUrl, game.imgUrl)
+                && Objects.equals(shortDescription, game.shortDescription)
+                && Objects.equals(longDescription, game.longDescription);
     }
 
     @Override
