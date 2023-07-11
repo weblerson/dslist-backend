@@ -1,9 +1,18 @@
 package com.lerson.dslist.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.util.Objects;
 
+@Entity
+@Table(name="tb_game")
 public class Game {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private String title;
     private Integer year;
