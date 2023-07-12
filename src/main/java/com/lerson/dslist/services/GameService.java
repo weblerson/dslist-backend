@@ -6,7 +6,6 @@ import com.lerson.dslist.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,10 +17,9 @@ public class GameService {
 
     public List<GameMinDTO> findAll() {
 
-        List<GameMinDTO> games = new ArrayList<>();
         List<Game> result = this.gameRepository.findAll();
 
-        games = result.stream().map((Game t) -> new GameMinDTO(t)).collect(Collectors.toList());
+        List<GameMinDTO> games = result.stream().map((Game t) -> new GameMinDTO(t)).collect(Collectors.toList());
 
         return games;
     }
