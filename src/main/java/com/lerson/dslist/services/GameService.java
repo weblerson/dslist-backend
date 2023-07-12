@@ -19,8 +19,6 @@ public class GameService {
 
         List<Game> result = this.gameRepository.findAll();
 
-        List<GameMinDTO> games = result.stream().map((Game t) -> new GameMinDTO(t)).collect(Collectors.toList());
-
-        return games;
+        return result.stream().map((Game t) -> new GameMinDTO(t)).collect(Collectors.toList());
     }
 }
