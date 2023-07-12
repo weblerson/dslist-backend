@@ -22,4 +22,11 @@ public class GameListService {
 
         return result.stream().map(GameListDTO::new).collect(Collectors.toList());
     }
+
+    @Transactional(readOnly = true)
+    public GameListDTO findById(Long id) {
+        GameList result = this.gameListRepository.findById(id).get();
+
+        return new GameListDTO(result);
+    }
 }
