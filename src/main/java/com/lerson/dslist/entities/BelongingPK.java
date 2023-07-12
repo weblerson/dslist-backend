@@ -10,7 +10,7 @@ import java.util.Objects;
 public class BelongingPK {
 
     @ManyToOne
-    @JoinColumn(name = "name_id")  // Isso vai ser mapeado para dois campos chave estrangeira na tabela
+    @JoinColumn(name = "game_id")  // Isso vai ser mapeado para dois campos chave estrangeira na tabela
     private Game game;
 
     @ManyToOne
